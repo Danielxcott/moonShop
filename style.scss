@@ -121,8 +121,10 @@ $dropdown-link-color: #ececec;
   padding: 15px;
 }
 .card-img img{
-  width: 327px;
-  height: 400px;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center;
 }
 .new-item,
 .discount{
@@ -184,6 +186,39 @@ $dropdown-link-color: #ececec;
     color: #1f1f1f !important;
   }
 }
+.divider{
+  margin: 50px 0 50px 0;
+}
+.footer-header{
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+.footer-item{
+  margin-bottom: 50px;
+}
+.social-link{
+  color: #1f1f1f;
+  &:hover{
+    color: #b4b4b4;
+  }
+}
+.footer-link{
+  font-size: .9rem;
+  padding: 5px 0;
+  transition: 0.3s linear;
+  &:hover{
+    transform: translateX(5px);
+  }
+}
+.copy-right{
+  >a {
+    font-size: .9rem;
+  }
+}
+.follow-us{
+  font-size: .9rem;
+  color: #939393;
+}
 
 @media only screen and (min-width: 992px) {
   .dropdown:hover .mega-menu {
@@ -218,6 +253,9 @@ $dropdown-link-color: #ececec;
 @media screen and (max-width: 576px) {
   .card-img img {
     width: 100%;
+    height: 350px;
   }
-
+  .copy-right{
+    padding: 0 15px;
+  }
 }

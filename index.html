@@ -7,12 +7,13 @@
   <title>Moon shop</title>
 </head>
 <body>
+    <!-- Nav Bar -->
     <div class="container-fluid">
       <div class="row">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-12">
-              <nav class="navbar navbar-expand-lg bg-white">
+              <nav class="navbar navbar-expand-lg bg-white position-fixed  w-100">
                 <div class="container">
                   <a class="navbar-brand d-lg-none" href="#">MOON</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -107,6 +108,284 @@
         </div>
       </div>
     </div>
+    <div class="mt-5"></div>
+    <!-- Main Carousel -->
+    <div class="container carousel-section">
+      <div id="carouselExampleDark" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <a href="" class="carousel-item active" data-bs-interval="10000">
+            <img src="/public/images/main-slider-3-2.jpg" class="d-block w-100 carousel-img"  alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </a>
+          <a href="" class="carousel-item" data-bs-interval="2000">
+            <img src="/public/images/main-slider-3-3.jpg" class="d-block w-100 carousel-img"  alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </a>
+          <a href="" class="carousel-item">
+            <img src="/public/images/main-slider-2-1.jpg" class="d-block w-100 carousel-img"  alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </a>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <!-- Product Lists -->
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-12 col-lg-6">
+          <ul class="list-group d-none d-lg-flex">
+            <li class="list-item"><a href="" class="active">ALL</a></li>
+            <li class="list-item"><a href="">HOME DECOR</a></li>
+            <li class="list-item"><a href="">LIGHTING</a></li>
+            <li class="list-item"><a href="">DECORATION</a></li>
+          </ul>
+          <li class="nav-item dropdown d-block d-lg-none">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              CATEGORIES
+            </a>
+            <ul class="dropdown-menu mega-menu">
+              <li><a class="dropdown-item" href="#">ALL</a></li>
+              <li><a class="dropdown-item" href="#">HOME DECOR</a></li>
+              <li><a class="dropdown-item" href="">LIGHTING</a></li>
+              <li><a class="dropdown-item" href="#">DECORATION</a></li>
+            </ul>
+          </li>
+        </div>
+        <div class="col-12 col-lg-6 mt-3 mt-lg-0 ">
+            <div class="price-range">
+              <div class="min-max">
+                <div class="min">
+                  <label>MIN $ <span class="min-value">555 </span></label>
+                </div>
+                <div class="min-max-range">
+                  <input type="range" class="range" id="min-value" min="0" max="5000" value="0">
+                  <input type="range" class="range" id="max-value" min="5001" max="9999" value="9999">
+                </div>
+                <div class="max">
+                  <label>MAX $ <span class="max-value">499 </span></label>
+                </div>
+              </div>
+            </div>
+      </div>
+      </div>
+      <div class="row products">
+        <div class="col-12 col-lg-3 mb-2">
+          <div class="card position-relative overflow-hidden">
+            <div class="card-img">
+              <img src="https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-7-600x728.jpg" alt="">
+            </div>
+            <div class="d-flex justify-content-between position-absolute top-0 w-100 new-product">
+              <span class="new-item">NEW</span>
+              <span class="discount">-19%</span>
+            </div>
+            <div class="position-absolute bottom-0 justify-content-center w-100 product-detail animate__animated animate__bounceInUp">
+              <a href="" class="quick-look text-decoration-none">QUICK LOOK</a>
+              <a href="" class="text-decoration-non wishlist"><i class="bi bi-heart-fill" id="wishlist"></i></a>
+              <a href="" class="text-decoration-non wishlist d-none"><i class="bi bi-check-lg" id="wishlist"></i></a>
+            </div>
+          </div>
+          <div class="text-center m-2 product-price">
+            <p class="mb-0">FLOWER VASE</p>
+            <span class="text-black-50"><a href="" class="text-black-50 text-decoration-none add-cart animate__animated animate__bounceInLeft delay-1s">ADD TO CART</a></span>
+            <div class="price align-items-center justify-content-center">
+              <span class="text-black-50 text-decoration-line-through pe-1 d-none">$20</span>
+              <span class="text-black-50 price">$20</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3 mb-2">
+          <div class="card position-relative overflow-hidden">
+            <div class="card-img">
+              <img src="https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-6-600x728.jpg" alt="">
+            </div>
+            <div class="d-none justify-content-between position-absolute top-0 w-100 new-product">
+              <span class="new-item">NEW</span>
+              <span class="discount">-19%</span>
+            </div>
+            <div class="position-absolute bottom-0 justify-content-center w-100 product-detail animate__animated animate__bounceInUp">
+              <a href="" class="quick-look text-decoration-none">QUICK LOOK</a>
+              <a href="" class="text-decoration-non wishlist"><i class="bi bi-heart-fill" id="wishlist"></i></a>
+              <a href="" class="text-decoration-non wishlist d-none"><i class="bi bi-check-lg" id="wishlist"></i></a>
+            </div>
+          </div>
+          <div class="text-center m-2 product-price">
+            <p class="mb-0">DECO ACCESSORY</p>
+            <span class="text-black-50"><a href="" class="text-black-50 text-decoration-none add-cart animate__animated animate__bounceInLeft delay-1s">ADD TO CART</a></span>
+            <div class="price align-items-center justify-content-center">
+              <span class="text-black-50 text-decoration-line-through pe-1 d-none">$20</span>
+              <span class="text-black-50 price">$20</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3 mb-2">
+          <div class="card position-relative overflow-hidden">
+            <div class="card-img">
+              <img src="https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-5-600x728.jpg" alt="">
+            </div>
+            <div class="d-flex justify-content-between position-absolute top-0 w-100 new-product">
+              <span class="new-item">NEW</span>
+              <span class="discount d-none">-19%</span>
+            </div>
+            <div class="position-absolute bottom-0 justify-content-center w-100 product-detail animate__animated animate__bounceInUp">
+              <a href="" class="quick-look text-decoration-none">QUICK LOOK</a>
+              <a href="" class="text-decoration-non wishlist"><i class="bi bi-heart-fill" id="wishlist"></i></a>
+              <a href="" class="text-decoration-non wishlist d-none"><i class="bi bi-check-lg" id="wishlist"></i></a>
+            </div>
+          </div>
+          <div class="text-center m-2 product-price">
+            <p class="mb-0">BASKET WITH HANDLES</p>
+            <span class="text-black-50"><a href="" class="text-black-50 text-decoration-none add-cart animate__animated animate__bounceInLeft delay-1s">ADD TO CART</a></span>
+            <div class="price align-items-center justify-content-center">
+              <span class="text-black-50 text-decoration-line-through pe-1 d-none">$20</span>
+              <span class="text-black-50 price">$20</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3 mb-2">
+          <div class="card position-relative overflow-hidden">
+            <div class="card-img">
+              <img src="https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-7-600x728.jpg" alt="">
+            </div>
+            <div class="d-flex justify-content-between position-absolute top-0 w-100 new-product">
+              <span class="new-item">NEW</span>
+              <span class="discount">-19%</span>
+            </div>
+            <div class="position-absolute bottom-0 justify-content-center w-100 product-detail animate__animated animate__bounceInUp">
+              <a href="" class="quick-look text-decoration-none">QUICK LOOK</a>
+              <a href="" class="text-decoration-non wishlist"><i class="bi bi-heart-fill" id="wishlist"></i></a>
+              <a href="" class="text-decoration-non wishlist d-none"><i class="bi bi-check-lg" id="wishlist"></i></a>
+            </div>
+          </div>
+          <div class="text-center m-2 product-price">
+            <p class="mb-0">WALL CLOCK</p>
+            <span class="text-black-50"><a href="" class="text-black-50 text-decoration-none add-cart animate__animated animate__bounceInLeft delay-1s">ADD TO CART</a></span>
+            <div class="price align-items-center justify-content-center">
+              <span class="text-black-50 text-decoration-line-through pe-1 d-none">$20</span>
+              <span class="text-black-50 price">$20</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3 mb-2">
+          <div class="card position-relative overflow-hidden">
+            <div class="card-img">
+              <img src="https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-7-600x728.jpg" alt="">
+            </div>
+            <div class="d-flex justify-content-between position-absolute top-0 w-100 new-product">
+              <span class="new-item">NEW</span>
+              <span class="discount">-19%</span>
+            </div>
+            <div class="position-absolute bottom-0 justify-content-center w-100 product-detail animate__animated animate__bounceInUp">
+              <a href="" class="quick-look text-decoration-none">QUICK LOOK</a>
+              <a href="" class="text-decoration-non wishlist"><i class="bi bi-heart-fill" id="wishlist"></i></a>
+              <a href="" class="text-decoration-non wishlist d-none"><i class="bi bi-check-lg" id="wishlist"></i></a>
+            </div>
+          </div>
+          <div class="text-center m-2 product-price">
+            <p class="mb-0">FLOWER VASE</p>
+            <span class="text-black-50"><a href="" class="text-black-50 text-decoration-none add-cart animate__animated animate__bounceInLeft delay-1s">ADD TO CART</a></span>
+            <div class="price align-items-center justify-content-center">
+              <span class="text-black-50 text-decoration-line-through pe-1 d-none">$20</span>
+              <span class="text-black-50 price">$20</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3 mb-2">
+          <div class="card position-relative overflow-hidden">
+            <div class="card-img">
+              <img src="https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-6-600x728.jpg" alt="">
+            </div>
+            <div class="d-none justify-content-between position-absolute top-0 w-100 new-product">
+              <span class="new-item">NEW</span>
+              <span class="discount">-19%</span>
+            </div>
+            <div class="position-absolute bottom-0 justify-content-center w-100 product-detail animate__animated animate__bounceInUp">
+              <a href="" class="quick-look text-decoration-none">QUICK LOOK</a>
+              <a href="" class="text-decoration-non wishlist"><i class="bi bi-heart-fill" id="wishlist"></i></a>
+              <a href="" class="text-decoration-non wishlist d-none"><i class="bi bi-check-lg" id="wishlist"></i></a>
+            </div>
+          </div>
+          <div class="text-center m-2 product-price">
+            <p class="mb-0">DECO ACCESSORY</p>
+            <span class="text-black-50"><a href="" class="text-black-50 text-decoration-none add-cart animate__animated animate__bounceInLeft delay-1s">ADD TO CART</a></span>
+            <div class="price align-items-center justify-content-center">
+              <span class="text-black-50 text-decoration-line-through pe-1 d-none">$20</span>
+              <span class="text-black-50 price">$20</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3 mb-2">
+          <div class="card position-relative overflow-hidden">
+            <div class="card-img">
+              <img src="https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-5-600x728.jpg" alt="">
+            </div>
+            <div class="d-flex justify-content-between position-absolute top-0 w-100 new-product">
+              <span class="new-item">NEW</span>
+              <span class="discount d-none">-19%</span>
+            </div>
+            <div class="position-absolute bottom-0 justify-content-center w-100 product-detail animate__animated animate__bounceInUp">
+              <a href="" class="quick-look text-decoration-none">QUICK LOOK</a>
+              <a href="" class="text-decoration-non wishlist"><i class="bi bi-heart-fill" id="wishlist"></i></a>
+              <a href="" class="text-decoration-non wishlist d-none"><i class="bi bi-check-lg" id="wishlist"></i></a>
+            </div>
+          </div>
+          <div class="text-center m-2 product-price">
+            <p class="mb-0">BASKET WITH HANDLES</p>
+            <span class="text-black-50"><a href="" class="text-black-50 text-decoration-none add-cart animate__animated animate__bounceInLeft delay-1s">ADD TO CART</a></span>
+            <div class="price align-items-center justify-content-center">
+              <span class="text-black-50 text-decoration-line-through pe-1 d-none">$20</span>
+              <span class="text-black-50 price">$20</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3 mb-2">
+          <div class="card position-relative overflow-hidden">
+            <div class="card-img">
+              <img src="https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-7-600x728.jpg" alt="">
+            </div>
+            <div class="d-flex justify-content-between position-absolute top-0 w-100 new-product">
+              <span class="new-item">NEW</span>
+              <span class="discount">-19%</span>
+            </div>
+            <div class="position-absolute bottom-0 justify-content-center w-100 product-detail animate__animated animate__bounceInUp">
+              <a href="" class="quick-look text-decoration-none">QUICK LOOK</a>
+              <a href="" class="text-decoration-non wishlist"><i class="bi bi-heart-fill" id="wishlist"></i></a>
+              <a href="" class="text-decoration-non wishlist d-none"><i class="bi bi-check-lg" id="wishlist"></i></a>
+            </div>
+          </div>
+          <div class="text-center m-2 product-price">
+            <p class="mb-0">WALL CLOCK</p>
+            <span class="text-black-50"><a href="" class="text-black-50 text-decoration-none add-cart animate__animated animate__bounceInLeft delay-1s">ADD TO CART</a></span>
+            <div class="price align-items-center justify-content-center">
+              <span class="text-black-50 text-decoration-line-through pe-1 d-none">$20</span>
+              <span class="text-black-50 price">$20</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer-->
+
   <script type="module" src="/main.js"></script>
 </body>
 </html>

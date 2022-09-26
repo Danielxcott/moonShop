@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
 @import "/node_modules/bootstrap-icons/font/bootstrap-icons.css";
-
+@import "/node_modules/animate.css";
 
 $navbar-nav-link-padding-x: 1.4rem;
 $navbar-padding-y: 1.8rem;
@@ -9,6 +9,10 @@ $dropdown-link-color: #ececec;
 
 @import "/node_modules/bootstrap/scss/bootstrap.scss";
 
+.navbar{
+  z-index: 4;
+  padding-right: 1rem;
+}
 .navbar-brand{
   font-family: 'Montserrat', sans-serif;
   font-weight: bolder;
@@ -62,14 +66,124 @@ $dropdown-link-color: #ececec;
   color: white;
   outline: none;
 }
-
-
-
-
-
-
-
-
+.carousel-section{
+  height: 620px;
+}
+.carousel-img{
+  object-fit: cover;
+  object-position: center;
+  height: 550px;
+}
+.list-group{
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: space-evenly;
+}
+.list-item a{
+  text-decoration: none;
+  color: #9e9c9c;
+  font-size: .8rem;
+  &.active{
+    color: #1f1f1f;
+  }
+}
+.min-max{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.range{
+  -webkit-appearance:none;
+  appearance: none;
+  width: 50%;
+  max-width: 400px;
+  outline: none;
+  float: left;
+  background-color: #b4b4b4;
+  height: 8px;
+}
+.range::-webkit-slider-thumb{
+  -webkit-appearance:none;
+  appearance: none;
+  background-color: #1f1f1f;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+.products{
+  margin-top: 60px;
+}
+.card-img{
+  overflow: hidden;
+}
+.new-product{
+  padding: 15px;
+}
+.card-img img{
+  width: 327px;
+  height: 400px;
+}
+.new-item,
+.discount{
+  color: #616060;
+  font-size: .8rem;
+}
+.quick-look{
+  width: 130px;
+  padding: 5px;
+  background-color: #1f1f1f;
+  color: #ffffff;
+  font-size: small;
+  text-align: center;
+  &:hover{
+    color: #b4b4b4;
+  }
+}
+.wishlist{
+  background-color: #555555;
+  width: 30px;
+  text-align: center;
+  font-size: small;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#wishlist{
+  color: #ffffff;
+  &:hover{
+    color: #b4b4b4;
+  }
+}
+.product-detail{
+  display: none;
+}
+.product-detail.show{
+  display: flex;
+}
+.product-price{
+  overflow: hidden;
+}
+.price{
+  opacity: 1;
+  display: flex;
+}
+.add-cart{
+  display: none ;
+  opacity: 0;
+}
+.price.active{
+  opacity: 0;
+  display: none;
+}
+.add-cart.active{
+  font-size: .8rem;
+  opacity: 1;
+  display: block;
+  &:hover{
+    color: #1f1f1f !important;
+  }
+}
 
 @media only screen and (min-width: 992px) {
   .dropdown:hover .mega-menu {
@@ -100,4 +214,10 @@ $dropdown-link-color: #ececec;
     width: 40vw;
     flex-wrap: wrap;
   }
+}
+@media screen and (max-width: 576px) {
+  .card-img img {
+    width: 100%;
+  }
+
 }

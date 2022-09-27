@@ -1,7 +1,7 @@
 import './style.scss';
-
 import * as bootstrap from 'bootstrap';
-
+import $ from 'jquery'
+window.jQuery = window.$ = $;
 
 let searchBox = document.querySelector(".search-box");
 
@@ -14,3 +14,4 @@ document.addEventListener("click",(e)=>{
         searchBox.classList.add("d-none");
     }
 })
+

@@ -6,7 +6,6 @@ $navbar-nav-link-padding-x: 1.4rem;
 $navbar-padding-y: 1.8rem;
 $dropdown-link-color: #ececec;
 
-
 @import "/node_modules/bootstrap/scss/bootstrap.scss";
 
 .navbar{
@@ -220,10 +219,11 @@ $dropdown-link-color: #ececec;
   color: #939393;
 }
 .breadcrumb-container{
-  padding: 28px 20px 2px 20px;
+  padding: 20px 20px;
   .breadcrumbo{
     display: flex;
     list-style-type: none;
+    margin: 20px 95px 10px;
     >.breadcrumb-items{
       padding: 0 18px;
       >a{
@@ -238,7 +238,7 @@ $dropdown-link-color: #ececec;
 }
 #added-alert{
   padding: 15px;
-  margin: 0 53px
+  margin: 0 95px
 }
 .view-cart{
   padding: 7px 30px;
@@ -284,6 +284,10 @@ $dropdown-link-color: #ececec;
     border: none;
     color: #ffffff;
     background-color: #1f1f1f;
+    transition: 0.2s linear;
+    &:hover{
+      background-color: #555555;
+    }
   }
 }
 .quantity-add-group{
@@ -295,9 +299,19 @@ $dropdown-link-color: #ececec;
   }
   input{
     width: 40px;
+    text-align: center;
     &:focus{
       outline: none;
     }
+
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type=number] {
+    -moz-appearance: textfield;
   }
   span{
     padding: 0 5px;
@@ -325,10 +339,71 @@ $dropdown-link-color: #ececec;
     }
   }
 }
-
-
-
-
+.tabs-nav{
+  background-color: #fafafa;
+}
+.nav-tabs{
+  >li{
+    border-top: .9px solid #dee2e6;
+    border-left: .9px solid #dee2e6;
+    border-right: .9px solid #dee2e6;
+  }
+}
+.review,
+.information,
+.description
+{
+  width: 280px;
+  color: #1f1f1f;
+  border-radius: 0;
+  border: 1px solid #555555;
+  font-size: .8rem;
+  padding: 15px;
+}
+//.nav-tabs{
+//  &:first-child{
+//    padding-left: 140px;
+//  }
+//}
+.nav-tabs .nav-link{
+  border: none !important;
+  border-radius: 0 ;
+  &:hover{
+    color: #555555;
+  }
+}
+.nav-tabs .nav-link.active{
+  background-color: #1f1f1f;
+  color: #ffffff;
+  border-radius: 0;
+  border: none !important;
+}
+.tab-content .tab-pane{
+  padding: 50px 0px;
+  //width: 60%;
+  //margin: auto;
+}
+.detail-description{
+  letter-spacing: 3px;
+  font-size: 1rem;
+}
+.review-message-item{
+  >.review-message{
+    flex-basis: 342px;
+    padding-left: 40px;
+  }
+}
+.review-submit{
+  width: 180px;
+  padding: 18px;
+  border: none;
+  background-color: #1f1f1f;
+  color: #fff;
+  transition: 0.2s linear;
+  &:hover{
+    background-color: #555555;
+  }
+}
 
 
 

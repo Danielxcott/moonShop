@@ -424,6 +424,44 @@ $dropdown-link-color: #ececec;
 .detail-page-footer{
   padding: 150px;
 }
+.wishlist-header{
+  position: sticky;
+  top: 100px;
+}
+.wishlist-bg{
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+.bg-layout{
+  width: 100%;
+  background: #1f1f1f6e;
+  height: 350px;
+  position: absolute;
+  top: 0;
+  backdrop-filter: blur(10px);
+  background-clip: padding-box;
+}
+#wl-heading{
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.wishlist-list{
+  overflow: scroll;
+}
+.wishlist-container{
+  position: relative;
+  z-index: 1;
+}
+#removeBtn{
+  &:hover{
+    color: #555555;
+  }
+}
 
 @media screen and (min-width: 1700px)  {
   #rp-heading{

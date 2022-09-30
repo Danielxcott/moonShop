@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Checkout - Moon</title>
+</head>
+<body>
+<!-- Nav bar -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 px-0">
+                    <nav class="navbar navbar-expand-lg bg-white position-fixed  w-100">
+                        <div class="container">
+                            <a class="navbar-brand d-lg-none" href="#">MOON</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
+                                <ul class="navbar-nav mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="index.html">HOME</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            SHOP
+                                        </a>
+                                        <div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                                            <ul>
+                                                <li><a class="dropdown-item" href="#">Product Types</a></li>
+                                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                            </ul>
+                                            <ul>
+                                                <li><a class="dropdown-item" href="#">Features</a></li>
+                                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                            </ul>
+                                            <ul>
+                                                <li><a class="dropdown-item" href="#">Pages</a></li>
+                                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                                <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Dropdown
+                                        </a>
+                                        <ul class="dropdown-menu mega-menu">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <a class="navbar-brand d-none d-lg-block" href="#">MOON</a>
+                                <div class="d-flex align-items-lg-center flex-column flex-lg-row">
+                                    <div>
+                                        <a href="" class="text-decoration-none text-black pe-4">
+                                            <i class="bi bi-cart"></i>
+                                            <span class="text-black-50">$(0)</span>
+                                        </a>
+                                        <a href="" class="text-decoration-none text-black pe-4">
+                                            <i class="bi bi-heart"></i>
+                                            <span class="text-black-50">(0)</span>
+                                        </a>
+                                    </div>
+                                    <div class="nav-item dropdown pe-4 mt-3 mt-lg-0">
+                                        <a class="nav-link dropdown-toggle text-black-50" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Zan
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item text-black" href="#">Profile</a></li>
+                                            <li><a class="dropdown-item text-black" href="#">Edit Profile</a></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li><a class="dropdown-item text-black" href="#">Log Out</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="position-relative d-none d-lg-block">
+                                        <i class="bi bi-search" id="searchBtn"></i>
+                                        <div class="position-absolute search-box d-none">
+                                            <form action="">
+                                                <input type="text" class="form-control searchInput" style="width: 280px" placeholder="Enter Keyword ...">
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <form class="d-flex d-lg-none mt-3 mt-lg-0" role="search">
+                                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                        <button class="btn btn-outline-dark" type="submit">Search</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mt-5 pt-5"></div>
+<!-- checkout main header image -->
+<div class="container-fluid wishlist-header">
+    <div class="position-relative">
+        <img src="/public/images/bg.jpeg" class="wishlist-bg" alt="">
+        <div class="bg-layout"></div>
+        <h4 class="position-absolute fs-1" id="wl-heading">Checkout</h4>
+    </div>
+</div>
+<div class="container-fluid wishlist-container">
+    <div class="bg-light py-3">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center border p-4 mb-2">
+                <p class="mb-0">Have a coupon?</p>
+                <button class="border-0 bg-transparent">Click here to enter your code.</button>
+            </div>
+            <div class="coupon-box">
+                <p class="mb-2">If you have a coupon code, please apply it below.</p>
+                <div>
+                    <form action="" class="d-flex">
+                        <input type="text" class="couponInput" placeholder="Coupon code">
+                        <button type="submit" class="btn couponApply">Apply Coupon</button>
+                    </form>
+                </div>
+            </div>
+            <form action="" id="address" class="">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <h2 class="text-uppercase cart-heading my-3 bill-detail">Billing details</h2>
+                    <div class="row g-3">
+                            <div class="col-lg-6">
+                                <label for="inputEmail4" class="form-label">First Name</label>
+                                <input type="text" name="fname" class="form-control addressBox" id="inputEmail4">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="inputPassword4" class="form-label">Last Name</label>
+                                <input type="text" name="lname" class="form-control addressBox" id="inputPassword4">
+                            </div>
+                            <div class="col-12">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control addressBox" id="email" placeholder="example@gmail.com">
+                            </div>
+                            <div class="col-12">
+                                <label for="mobile" class="form-label">Phone Number</label>
+                                <input type="number" class="form-control addressBox" id="mobile" >
+                            </div>
+                            <div class="col-12">
+                                <label for="inputAddress" class="form-label">Address</label>
+                                <input type="text" class="form-control addressBox" id="inputAddress" placeholder="1234 Main St">
+                            </div>
+                            <div class="col-12">
+                                <label for="inputAddress2" class="form-label">Address 2</label>
+                                <input type="text" class="form-control addressBox" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                            </div>
+                            <div class="col-12">
+                                <label for="inputCity" class="form-label">City</label>
+                                <input type="text" class="form-control addressBox" id="inputCity">
+                            </div>
+                            <div class="col-12">
+                                <label for="province" class="form-label">Province</label>
+                                <input type="text" name="province" class="form-control addressBox" id="province">
+                            </div>
+                            <div class="col-12">
+                                <label for="postcode" class="form-label">Postcode / ZIP</label>
+                                <input type="text" name="postcode" class="form-control addressBox" id="postcode">
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="anotherAdd">
+                                    <label class="form-check-label" for="anotherAdd">
+                                        Ship to a different address?
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="col-12 col-lg-6 differ-address d-none">
+                    <h2 class="text-uppercase cart-heading my-3 bill-detail ">Shipping Address</h2>
+                    <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="inputEmail4" class="form-label">First Name</label>
+                                <input type="text" name="fname1" class="form-control addressBox" id="inputEmail4">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputPassword4" class="form-label">Last Name</label>
+                                <input type="text" name="lname" class="form-control addressBox" id="inputPassword4">
+                            </div>
+                            <div class="col-12">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control addressBox" id="email" placeholder="example@gmail.com">
+                            </div>
+                            <div class="col-12">
+                                <label for="mobile" class="form-label">Phone Number</label>
+                                <input type="number" class="form-control addressBox" id="mobile" >
+                            </div>
+                            <div class="col-12">
+                                <label for="inputAddress" class="form-label">Address</label>
+                                <input type="text" class="form-control addressBox" id="inputAddress" placeholder="1234 Main St">
+                            </div>
+                            <div class="col-12">
+                                <label for="inputAddress2" class="form-label">Address 2</label>
+                                <input type="text" class="form-control addressBox" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                            </div>
+                            <div class="col-12">
+                                <label for="inputCity" class="form-label">City</label>
+                                <input type="text" class="form-control addressBox" id="inputCity">
+                            </div>
+                            <div class="col-12">
+                                <label for="province" class="form-label">Province</label>
+                                <input type="text" name="province" class="form-control addressBox" id="province">
+                            </div>
+                            <div class="col-12">
+                                <label for="postcode" class="form-label">Postcode / ZIP</label>
+                                <input type="text" name="postcode" class="form-control addressBox" id="postcode">
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div class="my-3">
+                    <h2 class="text-uppercase bill-detail">Your Order</h2>
+                    <table class="table payment-container">
+                        <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Subtotal</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                               <th class="text-secondary"> Basket With Handles
+                                   &cross;
+                                   <span>2</span>
+                               </th>
+                                <td>$320</td>
+                            </tr>
+                        <tr>
+                            <th>Subtotal</th>
+                            <td>$320</td>
+                        </tr>
+                        <tr>
+                            <th>Shipping</th>
+                            <td>
+                                <div class="">
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="radio" name="payment_method" id="exampleRadios1" checked value="option1">
+                                        <label class="form-check-label" for="exampleRadios1">
+                                            Cash on delivery
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="radio" name="payment_method" id="exampleRadios2" value="option1" >
+                                        <label class="form-check-label" for="exampleRadios2">
+                                            Local pickup
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="radio" name="payment_method" id="exampleRadios3" value="option1" >
+                                        <label class="form-check-label" for="exampleRadios3">
+                                            Debit / Credit Card
+                                        </label>
+                                    </div>
+<!--                                    <div class="row p-4 paymentMethod">-->
+<!--                                        <div class="col-12 col-lg-5 payment-item">-->
+<!--                                            <label for="cardNumber" class="form-label mb-0">Card Number</label>-->
+<!--                                            <input type="number" class="form-control addressBox" id="cardNumber" placeholder="Card Number">-->
+<!--                                        </div>-->
+<!--                                        <div class="col-12 col-lg-5 payment-item">-->
+<!--                                            <label for="expiredMonth" class="form-label mb-0">Expired Month</label>-->
+<!--                                            <input type="number" class="form-control addressBox" id="expiredMonth" placeholder="MM">-->
+<!--                                        </div>-->
+<!--                                        <div class="col-12 col-lg-5 payment-item">-->
+<!--                                            <label for="expiredYear" class="form-label mb-0">Expired Year</label>-->
+<!--                                            <input type="number" class="form-control addressBox" id="expiredYear" placeholder="YYYY">-->
+<!--                                        </div>-->
+<!--                                        <div class="col-12 col-lg-5 payment-item">-->
+<!--                                            <label for="cvc" class="form-label mb-0">CVC</label>-->
+<!--                                            <input type="number" class="form-control addressBox" id="cvc" placeholder="CVC">-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="paymentMethod">
+                            <td colspan="2">
+                                <div class="row p-4 paymentMethod">
+                                <div class="col-12 col-lg-5 payment-item">
+                                    <label for="cardNumber" class="form-label mb-1">Card Number</label>
+                                    <input type="number" class="form-control addressBox" id="cardNumber" placeholder="Card Number">
+                                </div>
+                                <div class="col-12 col-lg-5 payment-item">
+                                    <label for="expiredMonth" class="form-label mb-1">Expired Month</label>
+                                    <input type="number" class="form-control addressBox" id="expiredMonth" placeholder="MM">
+                                </div>
+                                <div class="col-12 col-lg-5 payment-item">
+                                    <label for="expiredYear" class="form-label mb-1">Expired Year</label>
+                                    <input type="number" class="form-control addressBox" id="expiredYear" placeholder="YYYY">
+                                </div>
+                                <div class="col-12 col-lg-5 payment-item">
+                                    <label for="cvc" class="form-label mb-1">CVC</label>
+                                    <input type="number" class="form-control addressBox" id="cvc" placeholder="CVC">
+                                </div>
+                            </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Total</th>
+                            <td>$320</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            <button class="btn btn-dark view-cart">Place Order</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!--Footer -->
+<div class="container-fluid wishlist-container bg-dark">
+    <div class="container">
+        <div class="row detail-page-footer">
+            <div class="col-12 col-md-6 col-lg-3 footer-item">
+                <h4 class="text-white footer-header">CUSTOMER SERVICE</h4>
+                <div class="d-flex flex-column">
+                    <a href="" class="text-decoration-none text-white footer-link">Help & Contact Us</a>
+                    <a href="" class="text-decoration-none text-white footer-link">Returns & Refunds</a>
+                    <a href="" class="text-decoration-none text-white footer-link">Online Stores</a>
+                    <a href="" class="text-decoration-none text-white footer-link">Terms & Conditions</a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 footer-item">
+                <h4 class="text-white footer-header">COMPANY</h4>
+                <div class="d-flex flex-column">
+                    <a href="" class="text-decoration-none text-white footer-link">What We Do</a>
+                    <a href="" class="text-decoration-none text-white footer-link">Available Services</a>
+                    <a href="" class="text-decoration-none text-white footer-link">Latest Posts</a>
+                    <a href="" class="text-decoration-none text-white footer-link">FAQs</a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 footer-item">
+                <h4 class="text-white footer-header">SOCIAL MEDIA</h4>
+                <div class="d-flex flex-column">
+                    <a href="" class="text-decoration-none text-white footer-link">Delivery</a>
+                    <a href="" class="text-decoration-none text-white footer-link">Fast Food</a>
+                    <a href="" class="text-decoration-none text-white footer-link">Pricing</a>
+                    <a href="" class="text-decoration-none text-white footer-link">Reserve Your Spot</a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 footer-item">
+                <h4 class="text-white footer-header">PROFILE</h4>
+                <div class="d-flex flex-column">
+                    <a href="" class="text-decoration-none text-white footer-link">Delivery</a>
+                    <a href="" class="text-decoration-none text-white footer-link">Fast Food</a>
+                    <a href="" class="text-decoration-none text-white footer-link">Pricing</a>
+                    <a href="" class="text-decoration-none text-white footer-link">Reserve Your Spot</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <hr class="text-white m-0">
+    </div>
+    <div class="copy-right">
+        <a href="" class="my-3 mx-5 text-light text-decoration-none d-inline-block">&copy; 2022 ZAN, All Rights Reserved</a>
+    </div>
+</div>
+<script type="module" src="/detail.js"></script>
+</body>
+</html>

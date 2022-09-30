@@ -8,6 +8,18 @@ $dropdown-link-color: #ececec;
 $dark: #1b1b1b;
 
 @import "/node_modules/bootstrap/scss/bootstrap.scss";
+.text-black-50{
+  color:  #1b1010c9 !important;
+}
+.form-check-input:checked {
+  background-color: #2a2929;
+  border-color: #363636 ;
+}
+.form-check-input:focus {
+  border-color: #363636;
+  box-shadow: 0 0 0 0.25rem #36363617;
+}
+
 .navbar{
   z-index: 4;
   padding-right: 1rem;
@@ -536,7 +548,99 @@ $dark: #1b1b1b;
     color: #313131 !important;
   }
 }
+.couponInput{
+  color: #1f1f1f;
+  padding: 15px;
+  background-color: transparent;
+  border: 1px solid #555555;
+  border-right: 0 !important;
+  &:focus{
+    color: #1f1f1f;
+    outline: none;
+  }
+}
+.coupon-box{
+  animation: hide 0.2s linear;
+  display: none;
+  transform-origin: center;
+}
+.couponApply{
+  padding: 15px 20px;
+  background: black;
+  color: white;
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.7rem;
+  &:hover{
+    background-color: #313131 !important;
+    color: #fff !important;
+  }
+}
+.coupon-box.active{
+  animation: show 0.2s linear;
+  transform-origin: center;
+  display: block;
+}
+.bill-detail{
+  flex: 2 0 50px;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+}
+.form-check{
+  flex: 1 0 auto;
+  >label[for="anotherAdd"]{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: .8rem;
+  }
+}
+.payment-container> :not(caption) > * > *{
+  padding: 1.5rem .5rem;
+}
+.paymentMethod{
+  display: none;
+}
+.paymentMethod.active{
+  display: block;
+}
+.payment-item{
+  margin-bottom: 1rem;
+}
+.addressBox{
+  color: #1f1f1f;
+  padding: 11px;
+  border-radius: 0;
+  border-color: #848484;
+  background-color: transparent;
+  &:focus{
+    color: #363636;
+    box-shadow: none;
+    border-color: #848484;
+  }
+}
 
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px)
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+@keyframes hide {
+  0% {
+    opacity: 1;
+    transform: translateY(0px)
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-60px)
+  }
+}
 
 /*Responsive*/
 @media screen and (min-width: 1700px)  {

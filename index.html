@@ -176,21 +176,22 @@
             <div class="price-range">
               <div class="min-max">
                 <div class="min">
-                  <label>MIN $ <span class="min-value">555 </span></label>
+                  <label>MIN $ <span class="min-value progress-value">0 </span></label>
                 </div>
-                <div class="min-max-range">
-                  <input type="range" class="range" id="min-value" min="0" max="5000" value="0">
-                  <input type="range" class="range" id="max-value" min="5001" max="9999" value="9999">
+                <div class="range-slider">
+                  <div class="progress-slider"></div>
+                  <input type="range" class="range-min" id="min-value" min="0" max="300" value="0">
+                  <input type="range" class="range-max" id="max-value" min="0" max="300" value="300">
                 </div>
                 <div class="max">
-                  <label>MAX $ <span class="max-value">499 </span></label>
+                  <label>MAX $ <span class="max-value progress-value">300 </span></label>
                 </div>
               </div>
             </div>
       </div>
       </div>
       <div class="row products">
-        <div class="col-12 col-md-4 col-lg-3 product-item mb-2">
+        <div class="col-12 col-md-4 col-lg-3 product-item mb-2" data-price="10">
           <div class="card position-relative overflow-hidden">
             <div class="card-img">
               <img src="https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-7-600x728.jpg" alt="">
@@ -208,13 +209,13 @@
           <div class="text-center m-2 product-price">
             <p class="mb-0">FLOWER VASE</p>
             <span class="text-black-50"><a href="" class="text-black-50 text-decoration-none add-cart animate__animated animate__bounceInLeft delay-1s">ADD TO CART</a></span>
-            <div class="price align-items-center justify-content-center">
+            <div class="price-container align-items-center justify-content-center">
               <span class="text-black-50 text-decoration-line-through pe-1 d-none">$20</span>
-              <span class="text-black-50 price">$20</span>
+              <span class="text-black-50 price">$10</span>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-4 col-lg-3 product-item mb-2">
+        <div class="col-12 col-md-4 col-lg-3 product-item mb-2" data-price="50">
           <div class="card position-relative overflow-hidden">
             <div class="card-img">
               <img src="https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-6-600x728.jpg" alt="">
@@ -232,13 +233,13 @@
           <div class="text-center m-2 product-price">
             <p class="mb-0">DECO ACCESSORY</p>
             <span class="text-black-50"><a href="" class="text-black-50 text-decoration-none add-cart animate__animated animate__bounceInLeft delay-1s">ADD TO CART</a></span>
-            <div class="price align-items-center justify-content-center">
+            <div class="price-container align-items-center justify-content-center">
               <span class="text-black-50 text-decoration-line-through pe-1 d-none">$20</span>
-              <span class="text-black-50 price">$20</span>
+              <span class="text-black-50 price">$50</span>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-4 col-lg-3 product-item mb-2">
+        <div class="col-12 col-md-4 col-lg-3 product-item mb-2" data-price="10">
           <div class="card position-relative overflow-hidden">
             <div class="card-img">
               <img src="https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-5-600x728.jpg" alt="">
@@ -256,13 +257,13 @@
           <div class="text-center m-2 product-price">
             <p class="mb-0">BASKET WITH HANDLES</p>
             <span class="text-black-50"><a href="" class="text-black-50 text-decoration-none add-cart animate__animated animate__bounceInLeft delay-1s">ADD TO CART</a></span>
-            <div class="price align-items-center justify-content-center">
+            <div class="price-container align-items-center justify-content-center">
               <span class="text-black-50 text-decoration-line-through pe-1 d-none">$20</span>
-              <span class="text-black-50 price">$20</span>
+              <span class="text-black-50 price">$10</span>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-4 col-lg-3 product-item mb-2">
+        <div class="col-12 col-md-4 col-lg-3 product-item mb-2" data-price="80">
           <div class="card position-relative overflow-hidden">
             <div class="card-img">
               <img src="https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-7-600x728.jpg" alt="">
@@ -280,13 +281,13 @@
           <div class="text-center m-2 product-price">
             <p class="mb-0">WALL CLOCK</p>
             <span class="text-black-50"><a href="" class="text-black-50 text-decoration-none add-cart animate__animated animate__bounceInLeft delay-1s">ADD TO CART</a></span>
-            <div class="price align-items-center justify-content-center">
+            <div class="price-container align-items-center justify-content-center">
               <span class="text-black-50 text-decoration-line-through pe-1 d-none">$20</span>
-              <span class="text-black-50 price">$20</span>
+              <span class="text-black-50 price">$80</span>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-4 col-lg-3 product-item mb-2">
+        <div class="col-12 col-md-4 col-lg-3 product-item mb-2" data-price="40">
           <div class="card position-relative overflow-hidden">
             <div class="card-img">
               <img src="https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-7-600x728.jpg" alt="">
@@ -304,13 +305,13 @@
           <div class="text-center m-2 product-price">
             <p class="mb-0">FLOWER VASE</p>
             <span class="text-black-50"><a href="" class="text-black-50 text-decoration-none add-cart animate__animated animate__bounceInLeft delay-1s">ADD TO CART</a></span>
-            <div class="price align-items-center justify-content-center">
+            <div class="price-container align-items-center justify-content-center">
               <span class="text-black-50 text-decoration-line-through pe-1 d-none">$20</span>
-              <span class="text-black-50 price">$20</span>
+              <span class="text-black-50 price">$40</span>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-4 col-lg-3 product-item mb-2">
+        <div class="col-12 col-md-4 col-lg-3 product-item mb-2" data-price="120">
           <div class="card position-relative overflow-hidden">
             <div class="card-img">
               <img src="https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-6-600x728.jpg" alt="">
@@ -328,13 +329,13 @@
           <div class="text-center m-2 product-price">
             <p class="mb-0">DECO ACCESSORY</p>
             <span class="text-black-50"><a href="" class="text-black-50 text-decoration-none add-cart animate__animated animate__bounceInLeft delay-1s">ADD TO CART</a></span>
-            <div class="price align-items-center justify-content-center">
+            <div class="price-container align-items-center justify-content-center">
               <span class="text-black-50 text-decoration-line-through pe-1 d-none">$20</span>
-              <span class="text-black-50 price">$20</span>
+              <span class="text-black-50 price">$120</span>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-4 col-lg-3 product-item mb-2">
+        <div class="col-12 col-md-4 col-lg-3 product-item mb-2" data-price="200">
           <div class="card position-relative overflow-hidden">
             <div class="card-img">
               <img src="https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-5-600x728.jpg" alt="">
@@ -352,13 +353,13 @@
           <div class="text-center m-2 product-price">
             <p class="mb-0">BASKET WITH HANDLES</p>
             <span class="text-black-50"><a href="" class="text-black-50 text-decoration-none add-cart animate__animated animate__bounceInLeft delay-1s">ADD TO CART</a></span>
-            <div class="price align-items-center justify-content-center">
+            <div class="price-container align-items-center justify-content-center">
               <span class="text-black-50 text-decoration-line-through pe-1 d-none">$20</span>
-              <span class="text-black-50 price">$20</span>
+              <span class="text-black-50 price">$200</span>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-4 col-lg-3 product-item mb-2">
+        <div class="col-12 col-md-4 col-lg-3 product-item mb-2" data-price="189">
           <div class="card position-relative overflow-hidden">
             <div class="card-img">
               <img src="https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-7-600x728.jpg" alt="">
@@ -376,11 +377,14 @@
           <div class="text-center m-2 product-price">
             <p class="mb-0">WALL CLOCK</p>
             <span class="text-black-50"><a href="" class="text-black-50 text-decoration-none add-cart animate__animated animate__bounceInLeft delay-1s">ADD TO CART</a></span>
-            <div class="price align-items-center justify-content-center">
+            <div class="price-container align-items-center justify-content-center">
               <span class="text-black-50 text-decoration-line-through pe-1 d-none">$20</span>
-              <span class="text-black-50 price">$20</span>
+              <span class="text-black-50 price">$189</span>
             </div>
           </div>
+        </div>
+        <div class="col-12 noti-product text-center product-item mb-2 hide" data-price="0">
+            <h2>There is no products that match with price filter.</h2>
         </div>
       </div>
     </div>

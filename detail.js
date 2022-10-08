@@ -96,9 +96,6 @@ let qtyInput = document.querySelector("#qtyInput");
         if(value > min)
         {
             qtyInput.value --;
-        }else
-        {
-            return false;
         }
     }
 
@@ -112,6 +109,7 @@ let qtyInput = document.querySelector("#qtyInput");
         }
     }
 
+   try{
     qutyContainer.addEventListener("submit",e=>{
         e.preventDefault();
         let max = Number(qtyInput.getAttribute("max"))
@@ -126,63 +124,98 @@ let qtyInput = document.querySelector("#qtyInput");
             console.log("sorry we are not allow to use the number that is greater than the maximum number");
         }
     })
+   }catch(err){}
 
-    let table = document.querySelector("table tbody");
-    let cartLists  = [...table.children];
-    let coupon = cartLists.pop();
-
-    cartLists.forEach((cartlist,index)=>{
-        let qtyInput = cartlist.querySelector("#qtyInput");
-        let plusBtn = cartlist.querySelector("#cart-plus");
-        let minusBtn = cartlist.querySelector("#cart-minus");
-        
-        plusBtn.addEventListener("click",cartPlus)
-        minusBtn.addEventListener("click",cartMinus)
-
-        function cartPlus()
-        {
-        let max = Number(qtyInput.getAttribute("max"))
-        let value = qtyInput.valueAsNumber;
-        let price = cartlist.querySelector("#item-price");
-        let num = cartlist.querySelector("#unit-price").getAttribute("data-unit-price");
-        if(value < max)
-        {
-            qtyInput.value++;
-          let value = qtyInput.value 
-          let result = Number(num)*value;
-          price.innerText = `$${result.toFixed(1)}`;
-        }
-        toCalc();
-        }
-
-        function cartMinus()
-        {
-            qtyInput.setAttribute("min",1);
-            let min = Number(qtyInput.getAttribute("min"))
-            let value = qtyInput.valueAsNumber;
-            let price = cartlist.querySelector("#item-price");
-            let num =  cartlist.querySelector("#unit-price").getAttribute("data-unit-price");
-            if(value > min)
+    let table = document.querySelector(".cart-list tbody");
+    try{
+        let cartLists  = [...table.children];
+        let coupon = cartLists.pop();
+        cartLists.forEach((cartlist,index)=>{
+            let qtyInput = cartlist.querySelector("#qtyInput");
+            const plusBtn = cartlist.querySelector("#cart-plus");
+            const minusBtn = cartlist.querySelector("#cart-minus");
+            const remove = cartlist.querySelector("#removeBtn");
+            const showNoProd = document.querySelector(".no-product");
+            const hideCoupon = document.querySelector(".hidecoupon");
+            const proceed = document.querySelector(".proceed");
+            
+            plusBtn.addEventListener("click",cartPlus)
+            minusBtn.addEventListener("click",cartMinus)
+            remove.addEventListener("click",(e)=>{
+                e.target.parentElement.parentElement.parentElement.remove()
+                toCalc();
+                checkCartList();
+            })
+    
+            function cartPlus()
             {
-            qtyInput.value --;
-            let value = qtyInput.value;
-            let result = Number(num)*value;
-            price.innerText = `$${result.toFixed(1)}`;
+            let max = Number(qtyInput.getAttribute("max"))
+            let value = qtyInput.valueAsNumber;
+            let currentPrice = cartlist.querySelector("#item-price");
+            let unitPrice = cartlist.querySelector("#unit-price").getAttribute("data-unit-price");
+            if(value < max)
+            {
+                qtyInput.value++;
+              let value = qtyInput.value 
+              let result = Number(unitPrice)*value;
+              currentPrice.innerText = `$${result.toFixed(1)}`;
             }
             toCalc();
-        }
-       
-        function toCalc()
-        {
-            let getPrices = document.querySelectorAll("#item-price");
-            let checkPrices = [...getPrices];
-            let subTotal = document.querySelector(".subtotal");
-            let tax = document.querySelector(".tax");
-            let total = checkPrices.map(price=>price.innerText.replace("$","")).reduce((x,y)=>Number(x)+Number(y));
-            subTotal.innerText = `$${total.toFixed(1)}`;
-            let result = document.querySelector("#total");
-            result.innerText = `$ ${Number(subTotal.innerText.replace("$",""))+Number(tax.innerText.replace("$",""))}`
-        }
-        toCalc();
-    })
+            }
     
+            function cartMinus()
+            {
+                qtyInput.setAttribute("min",1);
+                let min = Number(qtyInput.getAttribute("min"))
+                let value = qtyInput.valueAsNumber;
+                let currentPrice = cartlist.querySelector("#item-price");
+                let unitPrice =  cartlist.querySelector("#unit-price").getAttribute("data-unit-price");
+                if(value > min)
+                {
+                qtyInput.value --;
+                let value = qtyInput.value;
+                let result = Number(unitPrice)*value;
+                currentPrice.innerText = `$${result.toFixed(1)}`;
+                }
+                toCalc();
+            }
+           
+            function toCalc()
+            {
+                let getPrices = document.querySelectorAll("#item-price");
+                let checkPrices = [...getPrices];
+                let subTotal = document.querySelector(".subtotal");
+                let tax = document.querySelector(".tax");
+                let result = document.querySelector("#total");
+                let currentPrice = cartlist.querySelector("#item-price");
+    
+                if(checkPrices.length > 1)
+                {
+                let total = checkPrices.map(price=>price.innerText.replace("$","")).reduce((x,y)=>Number(x)+Number(y));
+                subTotal.innerText = `$${total.toFixed(1)}`;
+                result.innerText = `$ ${Number(subTotal.innerText.replace("$",""))+Number(tax.innerText.replace("$",""))}`
+                }else if(checkPrices.length == 1)
+                {
+                    subTotal.innerText = currentPrice.innerText;
+                    result.innerText = `$ ${Number(subTotal.innerText.replace("$",""))+Number(tax.innerText.replace("$",""))}`
+                }else
+                {
+                    subTotal.innerText = `$ 0`;
+                    result.innerText = `$ 0`;
+                }
+            }
+            
+            function checkCartList()
+            {
+                cartLists.shift()
+               if( cartLists.length == 1 )
+               {
+                showNoProd.classList.remove("d-none");
+                hideCoupon.classList.add("d-none");
+                proceed.remove();
+                proceed.classList.add("disabled")
+               }
+            }
+            toCalc();
+        })
+    }catch(err){}

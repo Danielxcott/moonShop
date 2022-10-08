@@ -1,6 +1,40 @@
 import './style.scss';
 
 import * as bootstrap from 'bootstrap';
+import Swiper from 'swiper/bundle';
+
+let swiper = new Swiper(".mySwiper", {
+    direction: "vertical",
+    mousewheel: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },    
+  });
+
+  let swiperSildes = document.querySelectorAll(".swiper-slide");
+  let animation = [
+    "animate__fadeInDown",
+    "animate__fadeInLeft",
+    "animate__backInUp",
+    "animate__bounceInDown",
+    "animate__bounceInLeft",
+    "animate__bounceInRight",
+    "animate__bounceInUp"
+  ]
+  swiperSildes.forEach(slide=>{
+    slide.addEventListener("wheel",(e)=>{
+        let description = slide.querySelector(".description")
+        let index = slide.getAttribute("data-page");
+        if(slide.classList.contains("swiper-slide-active"))
+        {
+            description.classList.add(`${animation[index]}`);
+        }else{
+            description.classList.remove(`${animation[index]}`);
+        }
+    })
+  })
 
 let productLists = document.querySelector(".products")
 let product = document.getElementsByClassName("products")[0].children;
@@ -46,7 +80,6 @@ let number = document.querySelectorAll(".progress-value");
                 maxPrice = Number(item.dataset.price);
             }
         })
-        console.log(maxPrice)
         return maxPrice;
     }
     function findMin()
@@ -81,7 +114,7 @@ function showProduct(min,max)
             // }
             item.classList.remove("hide");
             item.classList.add("show");
-        }else if(item.dataset.price > min || item.dataset.price >= max || min>maxPrice || max<minPrice)
+        }else if(item.dataset.price > min || item.dataset.price >= max || min>maxPrice || max == minPrice)
         {
             item.classList.remove("show");
             item.classList.add("hide");

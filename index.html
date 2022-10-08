@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Moon shop</title>
+  <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.min.css">
 </head>
 <body>
     <!-- Nav Bar -->
@@ -111,44 +112,28 @@
     <div class="mt-5"></div>
     <!-- Main Carousel -->
     <div class="container carousel-section">
-      <div id="carouselExampleDark" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper" >
+          <div class="swiper-slide" id="slide" data-page="0">
+            <img src="https://images.unsplash.com/photo-1523028157244-c2827982798b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80" class="swiper-lazy" alt="">
+            <div class="overlay"></div>
+            <div class="description animate__animated" >
+                <h1>The Pot</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus eum quam iure! Consequuntur modi obcaecati ab quisquam suscipit nesciunt excepturi, odio assumenda nihil exercitationem quod accusantium sit quis molestiae id!</p>
+            </div>
+          </div>
+          <div class="swiper-slide" id="slide" data-page="1">
+            <img src="https://images.unsplash.com/photo-1540638349517-3abd5afc5847?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" class="swiper-lazy" alt="">
+            <div class="overlay"></div>
+            <div class="description animate__animated" >
+                <h1>Furniture</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus eum quam iure! Consequuntur modi obcaecati ab quisquam suscipit nesciunt excepturi, odio assumenda nihil exercitationem quod accusantium sit quis molestiae id!</p>
+                <a href="" class="btn btn-dark view-cart">Check out</a>
+            </div></div>
         </div>
-        <div class="carousel-inner">
-          <a href="" class="carousel-item active" data-bs-interval="10000">
-            <img src="/public/images/main-slider-3-2.jpg" class="d-block w-100 carousel-img"  alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>Some representative placeholder content for the first slide.</p>
-            </div>
-          </a>
-          <a href="" class="carousel-item" data-bs-interval="2000">
-            <img src="/public/images/main-slider-3-3.jpg" class="d-block w-100 carousel-img"  alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>Some representative placeholder content for the second slide.</p>
-            </div>
-          </a>
-          <a href="" class="carousel-item">
-            <img src="/public/images/main-slider-2-1.jpg" class="d-block w-100 carousel-img"  alt="...">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>Some representative placeholder content for the third slide.</p>
-            </div>
-          </a>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        <div class="swiper-pagination"></div>
       </div>
+
     </div>
     <!-- Product Lists -->
     <div class="container">

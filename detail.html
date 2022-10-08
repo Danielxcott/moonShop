@@ -186,9 +186,9 @@
                    <form action="" class="quantity-container mb-4">
                        <div class="quantity-add-group">
                            <label for="">Quantity</label>
-                           <span><svg class="minus-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M9.4 278.6c-12.5-12.5-12.5-32.8 0-45.3l128-128c9.2-9.2 22.9-11.9 34.9-6.9s19.8 16.6 19.8 29.6l0 256c0 12.9-7.8 24.6-19.8 29.6s-25.7 2.2-34.9-6.9l-128-128z"/></svg></span>
-                           <input type="number" min="0" value="0" class="bg-transparent border-0">
-                           <span><svg class="plus-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z"/></svg></span>
+                           <span id="minus"><svg class="minus-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M9.4 278.6c-12.5-12.5-12.5-32.8 0-45.3l128-128c9.2-9.2 22.9-11.9 34.9-6.9s19.8 16.6 19.8 29.6l0 256c0 12.9-7.8 24.6-19.8 29.6s-25.7 2.2-34.9-6.9l-128-128z"/></svg></span>
+                           <input type="number" name="quantity"  max="10" value="1" id="qtyInput" class="bg-transparent border-0">
+                           <span id="plus"><svg class="plus-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z"/></svg></span>
                        </div>
                        <button class="detail-add-cart">Add to cart</button>
                    </form>
@@ -367,7 +367,7 @@
 <!-- Related products -->
     <h4 class="w-75 " id="rp-heading">Related Products</h4>
     <div class="container">
-        <div class="row related-product justify-content-center">
+        <div class="row related-product products justify-content-center">
             <div class="col-12 col-md-4 col-lg-3 product-item mb-2">
                 <div class="card position-relative overflow-hidden">
                     <div class="card-img">
@@ -386,7 +386,7 @@
                 <div class="text-center m-2 product-price">
                     <p class="mb-0">FLOWER VASE</p>
                     <span class="text-black-50"><a href="" class="text-black-50 text-decoration-none add-cart animate__animated animate__bounceInLeft delay-1s">ADD TO CART</a></span>
-                    <div class="price align-items-center justify-content-center">
+                    <div class="price-container align-items-center justify-content-center">
                         <span class="text-black-50 text-decoration-line-through pe-1 d-none">$20</span>
                         <span class="text-black-50 price">$20</span>
                     </div>
@@ -410,7 +410,7 @@
                 <div class="text-center m-2 product-price">
                     <p class="mb-0">DECO ACCESSORY</p>
                     <span class="text-black-50"><a href="" class="text-black-50 text-decoration-none add-cart animate__animated animate__bounceInLeft delay-1s">ADD TO CART</a></span>
-                    <div class="price align-items-center justify-content-center">
+                    <div class="price-container align-items-center justify-content-center">
                         <span class="text-black-50 text-decoration-line-through pe-1 d-none">$20</span>
                         <span class="text-black-50 price">$20</span>
                     </div>
@@ -434,7 +434,7 @@
                 <div class="text-center m-2 product-price">
                     <p class="mb-0">BASKET WITH HANDLES</p>
                     <span class="text-black-50"><a href="" class="text-black-50 text-decoration-none add-cart animate__animated animate__bounceInLeft delay-1s">ADD TO CART</a></span>
-                    <div class="price align-items-center justify-content-center">
+                    <div class="price-container align-items-center justify-content-center">
                         <span class="text-black-50 text-decoration-line-through pe-1 d-none">$20</span>
                         <span class="text-black-50 price">$20</span>
                     </div>
@@ -495,6 +495,7 @@
         <a href="" class="my-3 mx-5 text-light text-decoration-none d-inline-block">&copy; 2022 ZAN, All Rights Reserved</a>
     </div>
 </div>
+<script type="module" src="main.js"></script>
 <script type="module" src="/detail.js"></script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
 @import "/node_modules/bootstrap-icons/font/bootstrap-icons.css";
 @import "/node_modules/animate.css";
+@import "/node_modules/swiper/swiper-bundle.min.css";
 
 $navbar-nav-link-padding-x: 1.4rem;
 $navbar-padding-y: 1.8rem;
@@ -12,6 +13,51 @@ $dark: #1b1b1b;
   font-family: Ginevra;
   src: url("/public/font/Ginevra.ttf");
 }
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: start;
+  font-size: 18px;
+  background: #fff;
+  position: relative;
+> img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+}
+.swiper-slide .description{
+  position: absolute;
+  color: beige;
+  z-index: 3;
+  top: 30%;
+  right: 20%;
+  width: 50%;
+  border: none;
+}
+// .swiper-pagination-vertical.swiper-pagination-bullets, .swiper-vertical>.swiper-pagination-bullets{
+//     // right: 0;
+// }
+.overlay{
+  background: #282727;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  opacity: 0.3;
+}
+.swiper-pagination-bullet{
+  background-color: #f4f4f4;
+}
+.swiper-pagination-bullet-active{
+  background-color: #386238;
+}
+
 .text-black-50{
   color:  #1b1010c9 !important;
 }
@@ -83,7 +129,8 @@ $dark: #1b1b1b;
   outline: none;
 }
 .carousel-section{
-  height: 620px;
+  height: 500px;
+  margin-bottom: 2rem;
 }
 .carousel-img{
   object-fit: cover;
@@ -364,6 +411,7 @@ $dark: #1b1b1b;
 .quantity-container{
   display: flex;
   align-items: center;
+  user-select: none;
   .detail-add-cart{
     padding: 16px;
     border: none;
@@ -1063,6 +1111,11 @@ svg{
   }
 }
 @media screen and (max-width: 576px) {
+  .swiper-slide .description {
+    top: 30%;
+    right: 0%;
+    width: 100%;
+  }
   .min-max .range-slider {
     width: 100%;
   }
@@ -1117,6 +1170,7 @@ svg{
     justify-content: space-between;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    padding: 3px 10px;
   }
   .quantity-add-group label{
     font-size: 1.2rem;
@@ -1156,6 +1210,9 @@ svg{
   }
 @media only screen and (width: 280px)
 {
+  .carousel-section {
+    height: 400px;
+  }
   .slider-nav img {
     min-width: 80px;
     height: 50px;

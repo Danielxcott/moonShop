@@ -220,6 +220,7 @@ let qtyInput = document.querySelector("#qtyInput");
         })
     }catch(err){}
 
+   try{
     let couponBtn = document.querySelector("#coupon-btn");
     let coupon = document.querySelector(".coupon-box")
     couponBtn.addEventListener("click",_=>{
@@ -239,3 +240,20 @@ let qtyInput = document.querySelector("#qtyInput");
             diffAdd.classList.add("d-none");
         }
     })
+    
+    let checkOutContainer = document.querySelector(".checkout-container");
+    let paymentMethods = [...checkOutContainer.payment_method];
+    let creditCardBox = checkOutContainer.querySelector(".paymentMethod");
+  paymentMethods.forEach(option=>{
+    option.addEventListener("click",_=>{
+        if(option.getAttribute("id") === "credit-card")
+        {
+            creditCardBox.classList.add("active");
+        }else
+        {
+            creditCardBox.classList.remove("active");
+        }
+    })
+  })
+  
+   }catch(err){}

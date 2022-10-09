@@ -724,7 +724,7 @@ $dark: #1b1b1b;
   display: none;
 }
 .paymentMethod.active{
-  display: block;
+  display: table-row;
 }
 .payment-item{
   margin-bottom: 1rem;

@@ -3,6 +3,33 @@ import './style.scss';
 import * as bootstrap from 'bootstrap';
 import Swiper from 'swiper/bundle';
 
+let navScroll = document.querySelector(".navScroll");
+let lastScroll = 0;
+window.addEventListener('scroll',function(e){
+    let currentScroll = e.path[1].pageYOffset;
+    let height = window.innerHeight;    
+    if(currentScroll > height-100)
+    {
+       navScroll.classList.add("navShow");
+       navScroll.classList.remove("animate__fadeInUp");
+       if(!navScroll.classList.contains("animate__fadeInUp"))
+        {
+            navScroll.classList.add("animate__fadeInDown");
+        }
+    }
+    if(currentScroll < lastScroll )
+    {
+        
+        navScroll.classList.remove("navShow");
+        navScroll.classList.remove("animate__fadeInDown");
+        if(!navScroll.classList.contains("animate__fadeInDown"))
+         {
+             navScroll.classList.add("animate__fadeInUp");
+         }
+    }
+    lastScroll = currentScroll;
+})
+
 let swiper = new Swiper(".mySwiper", {
     direction: "vertical",
     mousewheel: true,

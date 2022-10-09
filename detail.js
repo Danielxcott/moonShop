@@ -219,3 +219,23 @@ let qtyInput = document.querySelector("#qtyInput");
             toCalc();
         })
     }catch(err){}
+
+    let couponBtn = document.querySelector("#coupon-btn");
+    let coupon = document.querySelector(".coupon-box")
+    couponBtn.addEventListener("click",_=>{
+        coupon.classList.toggle("active");
+    })
+
+    let checkAdd = document.querySelector("#anotherAdd");
+    let diffAdd = document.querySelector(".differ-address")
+    checkAdd.addEventListener("click",e=>{
+       let checked =  checkAdd.checked;
+        if(checked)
+        {
+            diffAdd.classList.remove("d-none");
+        }
+        else
+        {
+            diffAdd.classList.add("d-none");
+        }
+    })

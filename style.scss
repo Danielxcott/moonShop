@@ -13,6 +13,11 @@ $dark: #1b1b1b;
   font-family: Ginevra;
   src: url("/public/font/Ginevra.ttf");
 }
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
 .navbar{
   z-index: 4;
@@ -284,6 +289,9 @@ $dark: #1b1b1b;
 }
 .divider{
   margin: 50px 0 50px 0;
+}
+.footer{
+  margin-top: auto;
 }
 .footer-header{
   font-size: 1rem;

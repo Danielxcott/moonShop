@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moon - oreder Confrim</title>
+</head>
+<style>
+    #flex-end{
+        align-self: flex-end;
+    }
+</style>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 px-0">
+                        <nav class="navbar navbar-expand-lg bg-white position-fixed  w-100">
+                            <div class="container">
+                                <a class="navbar-brand d-lg-none" href="#">MOON</a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
+                                    <ul class="navbar-nav mb-2 mb-lg-0">
+                                        <li class="nav-item">
+                                            <a class="nav-link" aria-current="page" href="index.html">HOME</a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                SHOP
+                                            </a>
+                                            <div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                                                <ul>
+                                                    <li><a class="dropdown-item" href="#">Product Types</a></li>
+                                                    <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                                    <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                                    <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                                    <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                                </ul>
+                                                <ul>
+                                                    <li><a class="dropdown-item" href="#">Features</a></li>
+                                                    <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                                    <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                                    <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                                </ul>
+                                                <ul>
+                                                    <li><a class="dropdown-item" href="#">Pages</a></li>
+                                                    <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                                    <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                                    <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                                    <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Dropdown
+                                            </a>
+                                            <ul class="dropdown-menu mega-menu">
+                                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                <li><hr class="dropdown-divider"></li>
+                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <a class="navbar-brand d-none d-lg-block" href="#">MOON</a>
+                                    <div class="d-flex align-items-lg-center flex-column flex-lg-row">
+                                        <div>
+                                            <a href="" class="text-decoration-none text-black pe-4">
+                                                <i class="bi bi-cart"></i>
+                                                <span class="text-black-50">$(0)</span>
+                                            </a>
+                                            <a href="" class="text-decoration-none text-black pe-4">
+                                                <i class="bi bi-heart"></i>
+                                                <span class="text-black-50">(0)</span>
+                                            </a>
+                                        </div>
+                                        <div class="nav-item dropdown pe-4 mt-3 mt-lg-0">
+                                            <a class="nav-link dropdown-toggle text-black-50" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Zan
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item text-black" href="#">Profile</a></li>
+                                                <li><a class="dropdown-item text-black" href="#">Edit Profile</a></li>
+                                                <li><hr class="dropdown-divider"></li>
+                                                <li><a class="dropdown-item text-black" href="#">Log Out</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="position-relative d-none d-lg-block">
+                                            <i class="bi bi-search" id="searchBtn"></i>
+                                            <div class="position-absolute search-box d-none">
+                                                <form action="">
+                                                    <input type="text" class="form-control searchInput" style="width: 280px" placeholder="Enter Keyword ...">
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <form class="d-flex d-lg-none mt-3 mt-lg-0" role="search">
+                                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                            <button class="btn btn-outline-dark" type="submit">Search</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-5 pt-5"></div>
+    <!-- order confirm main header image -->
+    <div class="container-fluid wishlist-header">
+    <div class="position-relative">
+        <img src="/public/images/bg.jpeg" class="wishlist-bg" alt="">
+        <div class="bg-layout"></div>
+        <h4 class="position-absolute fs-1" id="wl-heading">Order Confirmation</h4>
+    </div>
+    </div>
+    <!-- Main content-->
+    <div class="container-fluid wishlist-container">
+        <div class="bg-light">
+            <div class="container py-3">
+                <div class="d-block d-lg-flex align-items-center justify-content-between my-2">
+                    <div>
+                    <h3>Hello , <span>Zan</span> !</h3>
+                    <p>Your order has been confirmed and will be shipping soon.</p>
+                    </div>
+                   <div>
+                    <p class="mb-1" >Order ID <span class="fw-bold">#2237784</span></p>
+                    <p class="">11 Oct 2022</p>
+                   </div>
+                </div>
+                <hr class="text-black-50">
+                <div class="row">
+                    <div class="col-12 col-lg-6 my-3">
+                        <h4 class="text-uppercase">Shipping Address</h4>
+                        <span>Zan</span>
+                        <p class="mb-0">123 street, example township, Yangon </p>
+                        <span>09123456789</span>
+                    </div>
+                    <div class="col-12 col-lg-6 my-3" id="flex-end">
+                        <h4 class="text-uppercase">Billing Address</h4>
+                        <span>Zan</span>
+                        <p class="mb-0">123 street, example township, Yangon </p>
+                        <span>09123456789</span>
+                    </div>
+                </div>
+                <div class="my-3">
+                    <table class="table align-middle">
+                        <thead>
+                            <tr>
+                                <th>PRODUCT</th>
+                                <th>QTY</th>
+                                <th>PRICE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="	https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-8-600x728.jpg" class="cart-img pe-3 d-none d-lg-inline-block" alt="" width="92" height="100"> 
+                                    <span class="mb-0 text-uppercase">Basket with handles</span>
+                                </td>
+                                <td class="order-qty">2</td>
+                                <td class="order-price">$160</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="	https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-8-600x728.jpg" class="cart-img pe-3 d-none d-lg-inline-block" alt="" width="92" height="100"> 
+                                    <span class="mb-0 text-uppercase">Basket with handles</span>
+                                </td>
+                                <td class="order-qty">6</td>
+                                <td class="order-price">$160</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="	https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-8-600x728.jpg" class="cart-img pe-3 d-none d-lg-inline-block" alt="" width="92" height="100"> 
+                                    <span class="mb-0 text-uppercase">Basket with handles</span>
+                                </td>
+                                <td class="order-qty">4</td>
+                                <td class="order-price">$160</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="	https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-8-600x728.jpg" class="cart-img pe-3 d-none d-lg-inline-block" alt="" width="92" height="100"> 
+                                    <span class="mb-0 text-uppercase">Basket with handles</span>
+                                </td>
+                                <td class="order-qty">8</td>
+                                <td class="order-price">$160</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="	https://depot.qodeinteractive.com/wp-content/uploads/2017/01/h1-product-8-600x728.jpg" class="cart-img pe-3 d-none d-lg-inline-block" alt="" width="92" height="100"> 
+                                    <span class="mb-0 text-uppercase">Basket with handles</span>
+                                </td>
+                                <td class="order-qty">1</td>
+                                <td class="order-price">$160</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 d-none d-lg-block"></div>
+                    <div class="col-12 col-lg-6">
+                        <table class="table cart-check-total">
+                            <tbody>
+                                <tr>
+                                    <th>Items <span class="item-total">(0)</span></th>
+                                    <td class="subtotal">$0</td>
+                                </tr>
+                                <tr>
+                                    <th>Tax</th>
+                                    <td class="tax">$ 4.8</td>
+                                </tr>
+                                <tr class="shipping">
+                                    <th>Shipping</th>
+                                    <td>Cash on delivery</td>
+                                </tr>
+                                <tr>
+                                    <th>Total</th>
+                                    <td class="total">$ 0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <a href="index.html" class="btn proceed w-50 m-auto d-block">Back To Home Page</a>
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+    <div class="container-fluid wishlist-container bg-dark">
+        <div class="container">
+            <div class="row detail-page-footer">
+                <div class="col-12 col-md-6 col-lg-3 footer-item">
+                    <h4 class="text-white footer-header">CUSTOMER SERVICE</h4>
+                    <div class="d-flex flex-column">
+                        <a href="" class="text-decoration-none text-white footer-link">Help & Contact Us</a>
+                        <a href="" class="text-decoration-none text-white footer-link">Returns & Refunds</a>
+                        <a href="" class="text-decoration-none text-white footer-link">Online Stores</a>
+                        <a href="" class="text-decoration-none text-white footer-link">Terms & Conditions</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 footer-item">
+                    <h4 class="text-white footer-header">COMPANY</h4>
+                    <div class="d-flex flex-column">
+                        <a href="" class="text-decoration-none text-white footer-link">What We Do</a>
+                        <a href="" class="text-decoration-none text-white footer-link">Available Services</a>
+                        <a href="" class="text-decoration-none text-white footer-link">Latest Posts</a>
+                        <a href="" class="text-decoration-none text-white footer-link">FAQs</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 footer-item">
+                    <h4 class="text-white footer-header">SOCIAL MEDIA</h4>
+                    <div class="d-flex flex-column">
+                        <a href="" class="text-decoration-none text-white footer-link">Delivery</a>
+                        <a href="" class="text-decoration-none text-white footer-link">Fast Food</a>
+                        <a href="" class="text-decoration-none text-white footer-link">Pricing</a>
+                        <a href="" class="text-decoration-none text-white footer-link">Reserve Your Spot</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 footer-item">
+                    <h4 class="text-white footer-header">PROFILE</h4>
+                    <div class="d-flex flex-column">
+                        <a href="" class="text-decoration-none text-white footer-link">Delivery</a>
+                        <a href="" class="text-decoration-none text-white footer-link">Fast Food</a>
+                        <a href="" class="text-decoration-none text-white footer-link">Pricing</a>
+                        <a href="" class="text-decoration-none text-white footer-link">Reserve Your Spot</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <hr class="text-white m-0">
+        </div>
+        <div class="container">
+            <div class="copy-right">
+                <a href="" class="my-3 mx-5 text-light text-decoration-none d-inline-block">&copy; 2022 ZAN, All Rights Reserved</a>
+            </div>
+        </div>
+    </div>
+<script type="module" src="/detail.js"></script>
+</body>
+</html>

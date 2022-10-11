@@ -3,7 +3,8 @@ import * as bootstrap from "bootstrap";
 import $, { each } from "jquery";
 window.jQuery = window.$ = $;
 
-let searchBox = document.querySelector(".search-box");
+export default () => {
+  let searchBox = document.querySelector(".search-box");
 
 document.addEventListener("click", (e) => {
   if (
@@ -265,7 +266,7 @@ try{
         })
     })
     const ordertax = document.querySelector(".tax");
-    const subtotal = document.querySelector(".subtotal");
+    const subtotal = document.querySelector("#subtotal");
     const total = document.querySelector(".total");
     let totalCalc = [];
     for(let  i = 0 ; i < qtyArray.length ; i++)
@@ -284,4 +285,5 @@ try{
 
 }catch(err){
     console.warn(err.message)
+}
 }

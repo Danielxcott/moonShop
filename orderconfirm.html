@@ -35,34 +35,33 @@
                                             <div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
                                                 <ul>
                                                     <li><a class="dropdown-item" href="#">Product Types</a></li>
-                                                    <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                                    <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                                    <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                                    <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                                    <li><a class="dropdown-item" href="#">Standard Product</a></li>
+                                                    <li><a class="dropdown-item" href="#">Grouped Product</a></li>
+                                                    <li><a class="dropdown-item" href="#">On Sale Product</a></li>
+                                                    <li><a class="dropdown-item" href="#">New Product</a></li>
                                                 </ul>
                                                 <ul>
                                                     <li><a class="dropdown-item" href="#">Features</a></li>
-                                                    <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                                    <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                                    <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                                    <li><a class="dropdown-item" href="#">Cart</a></li>
+                                                    <li><a class="dropdown-item" href="#">Checkout</a></li>
+                                                    <li><a class="dropdown-item" href="#">User Dashboard</a></li>
                                                 </ul>
                                                 <ul>
                                                     <li><a class="dropdown-item" href="#">Pages</a></li>
-                                                    <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                                    <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                                    <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
-                                                    <li><a class="dropdown-item" href="#">Mega Menu Link</a></li>
+                                                    <li><a class="dropdown-item" href="#">About Us</a></li>
+                                                    <li><a class="dropdown-item" href="#">What We Do</a></li>
+                                                    <li><a class="dropdown-item" href="#">Our Service</a></li>
+                                                    <li><a class="dropdown-item" href="#">Contact Us</a></li>
                                                 </ul>
                                             </div>
                                         </li>
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                Dropdown
+                                                Categories
                                             </a>
-                                            <ul class="dropdown-menu mega-menu">
+                                            <ul class="dropdown-menu mega-menu flex-column">
                                                 <li><a class="dropdown-item" href="#">Action</a></li>
                                                 <li><a class="dropdown-item" href="#">Another action</a></li>
-                                                <li><hr class="dropdown-divider"></li>
                                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                                             </ul>
                                         </li>
@@ -83,11 +82,11 @@
                                             <a class="nav-link dropdown-toggle text-black-50" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                 Zan
                                             </a>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item text-black" href="#">Profile</a></li>
-                                                <li><a class="dropdown-item text-black" href="#">Edit Profile</a></li>
-                                                <li><hr class="dropdown-divider"></li>
-                                                <li><a class="dropdown-item text-black" href="#">Log Out</a></li>
+                                            <ul class="dropdown-menu mega-menu flex-column">
+                                                <li><a class="dropdown-item text-white" href="#">Profile</a></li>
+                                                <li><a class="dropdown-item text-capitalize text-white" href="#">Edit Profile</a></li>
+                                                <li><hr class="dropdown-divider bg-white"></li>
+                                                <li><a class="dropdown-item text-white" href="#">Log Out</a></li>
                                             </ul>
                                         </div>
                                         <div class="position-relative d-none d-lg-block">
@@ -209,7 +208,7 @@
                             <tbody>
                                 <tr>
                                     <th>Items <span class="item-total">(0)</span></th>
-                                    <td class="subtotal">$0</td>
+                                    <td class="subtotal" id="subtotal">$0</td>
                                 </tr>
                                 <tr>
                                     <th>Tax</th>
@@ -232,7 +231,7 @@
         </div>
     </div>
     <!--Footer-->
-    <div class="container-fluid wishlist-container bg-dark">
+    <div class="container-fluid footer wishlist-container bg-dark">
         <div class="container">
             <div class="row detail-page-footer">
                 <div class="col-12 col-md-6 col-lg-3 footer-item">
@@ -256,19 +255,19 @@
                 <div class="col-12 col-md-6 col-lg-3 footer-item">
                     <h4 class="text-white footer-header">SOCIAL MEDIA</h4>
                     <div class="d-flex flex-column">
-                        <a href="" class="text-decoration-none text-white footer-link">Delivery</a>
-                        <a href="" class="text-decoration-none text-white footer-link">Fast Food</a>
-                        <a href="" class="text-decoration-none text-white footer-link">Pricing</a>
-                        <a href="" class="text-decoration-none text-white footer-link">Reserve Your Spot</a>
+                        <a href="" class="text-decoration-none text-white footer-link">Twitter</a>
+                        <a href="" class="text-decoration-none text-white footer-link">YouTube</a>
+                        <a href="" class="text-decoration-none text-white footer-link">Pinterest</a>
+                        <a href="" class="text-decoration-none text-white footer-link">Instagram</a>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3 footer-item">
                     <h4 class="text-white footer-header">PROFILE</h4>
                     <div class="d-flex flex-column">
-                        <a href="" class="text-decoration-none text-white footer-link">Delivery</a>
-                        <a href="" class="text-decoration-none text-white footer-link">Fast Food</a>
-                        <a href="" class="text-decoration-none text-white footer-link">Pricing</a>
-                        <a href="" class="text-decoration-none text-white footer-link">Reserve Your Spot</a>
+                        <a href="" class="text-decoration-none text-white footer-link">My Account</a>
+                        <a href="" class="text-decoration-none text-white footer-link">Checkout</a>
+                        <a href="" class="text-decoration-none text-white footer-link">Order Tracking</a>
+                        <a href="" class="text-decoration-none text-white footer-link">Help & Support</a>
                     </div>
                 </div>
             </div>
@@ -276,12 +275,11 @@
         <div class="row">
             <hr class="text-white m-0">
         </div>
-        <div class="container">
-            <div class="copy-right">
-                <a href="" class="my-3 mx-5 text-light text-decoration-none d-inline-block">&copy; 2022 ZAN, All Rights Reserved</a>
-            </div>
+        <div class="container copy-right">
+            <a href="" class="my-3 mx-5 text-light text-decoration-none d-inline-block">&copy; 2022 ZAN, All Rights Reserved</a>
         </div>
     </div>
-<script type="module" src="/detail.js"></script>
+    <script type="module" src="main.js"></script>
+<!-- <script type="module" src="/detail.js"></script> -->
 </body>
 </html>
